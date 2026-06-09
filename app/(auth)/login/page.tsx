@@ -20,15 +20,16 @@ export default function LoginPage() {
 
 
     return (
-        <div>
+        <div className="flex flex-col">
+            <h1 className="text-2xl font-bold">Login Page</h1>
             <div>
                 <form onSubmit={handleSubmit}>
                 {errorMessage && <p>{errorMessage}</p>}
-                <div>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <div className="mb-4">
+                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
                 </div>
-                <div>
-                    <input type="password" value={password}  onChange={(e) => setPassword(e.target.value)}/>
+                <div className="mb-4">
+                    <input type="password" value={password}  onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
                 </div>
                     <button type="submit">Submit</button>
                 </form>
