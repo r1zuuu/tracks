@@ -3,7 +3,6 @@ import { authClient } from "@/lib/auth-client"
 import { useState } from "react"
 
 
-
 export default function LoginPage() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
