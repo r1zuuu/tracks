@@ -13,7 +13,7 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
     const userWallets = await db.query.wallets.findMany({
-        where: eq(wallets.userId, session.user.id)
+        where: eq(wallets.userId, session.user.id),
     })
     return NextResponse.json(userWallets, {status: 200})
 }
